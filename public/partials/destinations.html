@@ -1,0 +1,14 @@
+<div class="pull-left span6">
+	<h3>
+		All Destinations
+	</h3>
+	<ul>
+		<li ng-repeat="airport in airports">
+			<a href="" ng-click="setAirport(airport.code)">
+				{{airport.code}} - {{airport.city}}
+			</a>
+		</li>
+	</ul>
+</div>
+<div class="pull-left span5" ng-include src="sideBarURL">
+</div>

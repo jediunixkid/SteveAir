@@ -1,0 +1,37 @@
+<html ng-app>
+  <head>
+    <title>
+      Angular Fun
+    </title>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-resource.min.js"></script>
+    <script type="text/javascript" src="js/controllers/app.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-responsive.min.css"/>
+  </head>
+  <body>
+    <div class="container" ng-controller="AppCtrl">
+      <h1>Steves Air</h1>
+      <ul ng-repeat="airport in airports">
+        <li>{{airport.code}}</li>
+        <li>{{airport.city}}</li>
+        <li>{{airport.name}}</li>
+      </ul>
+      <br />
+      <br />
+      <ul>
+        <li ng-repeat="airport in airports">
+          <a href="" ng-click=setAirport(airport.code)>{{airport.code}} - {{airport.city | uppercase}}</a>
+        </li>
+      </ul>
+      
+      <p>
+        {{'128' | currency}}
+        <br />
+        {{airports | json}}
+      </p>
+    </div>
+
+
+  </body>
+</html>

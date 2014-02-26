@@ -1,0 +1,43 @@
+<html ng-app>
+  <head>
+    <title>Angular Fun</title>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/angular-resource.min.js"></script>
+    <script type="text/javascript" src="js/controllers/app.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-theme.css"/>
+  </head>
+  
+  <body>
+    <div class="container" ng-controller="AppCtrl">
+      <h1>Steves Air</h1>
+      <div class='row'>
+      <div class="pull-left span6" id="leftColumn">
+        <ul>
+          <li ng-repeat="airport in airports">
+            <a href="" ng-click=setAirport(airport.code)>{{airport.code}} - {{airport.city | uppercase}}</a>
+            -
+            <a href="" ng-click=editAirport(airport.code)>edit</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="pull-left span5" ng-include src="sideBarURL">
+      </div>
+      </div>
+      <div class="clearfix">
+      <div>
+      
+      <div class"span12" ng-include src="formURL">
+      </div>
+      
+    </div>
+
+
+  </body>
+</html>

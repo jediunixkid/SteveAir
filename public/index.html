@@ -1,0 +1,48 @@
+<html ng-app="airline">
+  <head>
+    <title>Angular Fun</title>
+    <!--Need to add these to concat and then uglify-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+    
+    <script type="text/javascript" src="js/angulars/angular.min.js"></script>
+    <script type="text/javascript" src="js/angulars/angular-resource.min.js"></script>
+    <script type="text/javascript" src="js/angulars/angular-route.min.js"></script>
+    
+    <script type="text/javascript" src="js/lib/app.js"></script>
+    <script type="text/javascript" src="js/lib/services.js"></script>
+    
+    <script type="text/javascript" src="js/controllers/app-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/destinations-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/reservations-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/flights-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/airports-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/airport1-controller.js"></script>
+    <script type="text/javascript" src="js/controllers/airport2-controller.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css"/>
+    
+  </head>
+  
+  <body>
+    <div class="container" ng-controller="AppCtrl">
+      <h1>Steves Air</h1>
+        <ul class="nav nav-pills">
+          <li ng-class="destinationsActive">
+            <a href="#/">Destinations</a>
+          </li>
+          <li ng-class="flightsActive">
+            <a href="#/flights">Flights</a>
+          </li>
+          <li ng-class="reservationsActive">
+            <a href="#/reservations">Reservations</a>
+          </li>
+        </ul>
+      
+      <div ng-view>
+      </div>
+      
+    </div>
+  </body>
+</html>

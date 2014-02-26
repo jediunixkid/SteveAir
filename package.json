@@ -1,0 +1,17 @@
+{
+  "name": "angular",
+  "version": "0.0.0",
+  "description": "ERROR: No README.md file found!",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "connect": "2.12.0",
+    "mongojs": "*",
+    "mongoose": "~3.8.7"
+  },
+  "repository": "",
+  "author": "steve young",
+  "license": "BSD"
+}
